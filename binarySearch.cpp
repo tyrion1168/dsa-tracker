@@ -6,8 +6,9 @@ int binSearch(int arr[], int target, int n)
     int end = n - 1;
     while (start <= end)
     {
-        // int mid=(start+end)/2;//can overflow
-        int mid = start + end/ 2;
+         //int mid = start + end/ 2;
+        //start+end/2 can overflow
+        int mid=(start+(end-start))/2;
         if (arr[mid] == target)
         {
             return mid;
