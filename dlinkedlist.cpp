@@ -35,7 +35,7 @@ void createList(int arr[], int n)
 void display(struct Node *head)
 {
     struct Node *temp = head;
-    while (temp != 0)
+    while (temp->next != 0)
     {
         cout << temp->data << " ";
         temp = temp->next;
