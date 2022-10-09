@@ -12,6 +12,10 @@ int digits(long long n)
     }
     return count;
 }
+//Takes O(1) time complexity
+int digits(int num){
+    return int(log10(num)+1);
+}
 
 int main(){
     cout<<digits(1);
