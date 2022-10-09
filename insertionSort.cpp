@@ -1,22 +1,21 @@
-#include<iostream>
+#include<bits/stdc++.h>
 using namespace std;
-void insertionSort(int A[],int n){
-    int x,j;
+void insertionSort(int a[],int n){
     for(int i=1;i<n;i++){
-        j=i-1;
-        x=A[i];
-        while(j>-1 && A[j]<x){
-            A[j+1]=A[j];
+        int j=i-1;
+        int x=a[i];
+        while(j>-1 && a[j]>x){
+            a[j+1]=a[j];
             j--;
         }
-        A[j+1]=x;
+        a[j+1]=x;
     }
 }
 int main(){
-    int A[]={1,2,3,4,5,10};
-    insertionSort(A,6);
-    for(int i=0;i<6;i++){
-        cout<<A[i]<<" ";
+    int a[]={8,6,3,2,5,4};
+    insertionSort(a,6);
+    for(auto value : a){
+        cout<<value<<" ";
     }
 return 0;
 }
